@@ -38,16 +38,15 @@ After installing, shared skills are available in `.agents/shared/`. Reference th
 
 ## Notes
 
-### Git Integration Options
+### Setup
 
-**Option 1: Commit submodule (recommended for teams)**
-- Commit `.gitmodules` and `.agents/shared` to version control
-- Locks the team to a specific agent version
-- Cloners use `git clone --recursive` to fetch agents automatically
-- Or after cloning: `git submodule update --init --recursive`
+Add `.agents/` to your project's `.gitignore` to keep shared agents local:
 
-**Option 2: Add to .gitignore (for developer flexibility)**
-- Add `.agents/` to `.gitignore`
-- Each developer runs `npx agentz --install` independently
-- No version lock—developers can use different agent versions
-- Lighter git footprint
+```
+.agents/
+```
+
+Each developer independently manages their own agent installation. This provides:
+- Lightweight git footprint
+- Flexibility for developers to update agents independently
+- No merge conflicts from submodule version tracking

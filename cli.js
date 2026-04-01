@@ -24,8 +24,7 @@ switch (cmd) {
         }
 
         console.log("Installing agents...");
-        run(`git submodule add ${REPO_URL} ${TARGET_DIR}`);
-        run(`git submodule update --init --recursive`);
+        run(`git clone ${REPO_URL} ${TARGET_DIR}`);
         break;
 
     case "--update":
@@ -35,7 +34,7 @@ switch (cmd) {
         }
 
         console.log("Updating agents...");
-        run(`git submodule update --remote --merge ${TARGET_DIR}`);
+        run(`git -C ${TARGET_DIR} pull origin main`);
         break;
 
     case "--uninstall":
@@ -45,9 +44,7 @@ switch (cmd) {
         }
 
         console.log("Removing agents...");
-        run(`git submodule deinit -f ${TARGET_DIR}`);
-        run(`git rm -f ${TARGET_DIR}`);
-        run(`rm -rf .git/modules/${TARGET_DIR}`);
+        run(`rm -rf ${TARGET_DIR}`);
         break;
 
     default:
