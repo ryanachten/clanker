@@ -29,7 +29,8 @@ switch (cmd) {
         }
 
         console.log("Installing agents...");
-        run(`git clone ${REPO_URL} ${TARGET_DIR}`);
+        run(`git clone --filter=blob:none --sparse ${REPO_URL} ${TARGET_DIR}`);
+        run(`git -C ${TARGET_DIR} sparse-checkout set --no-cone skills/shared`);
         break;
 
     case "--update":
