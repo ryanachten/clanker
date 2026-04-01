@@ -2,23 +2,28 @@
 
 const { execSync } = require("child_process");
 const fs = require("fs");
+const path = require("path");
 
 const cmd = process.argv[2];
 
 const REPO_URL = "https://github.com/ryanachten/agentz.git";
-const TARGET_DIR = ".agents/shared";
+const TARGET_DIR = ".agents";
 
 function run(command) {
     execSync(command, { stdio: "inherit" });
 }
 
-function exists(path) {
-    return fs.existsSync(path);
+function exists(filepath) {
+    return fs.existsSync(filepath);
+}
+
+function isInstalled() {
+    return exists(path.join(TARGET_DIR, "skills", "shared"));
 }
 
 switch (cmd) {
     case "--install":
-        if (exists(TARGET_DIR)) {
+        if (isInstalled()) {
             console.log("Agents already installed.");
             process.exit(0);
         }
@@ -28,7 +33,7 @@ switch (cmd) {
         break;
 
     case "--update":
-        if (!exists(TARGET_DIR)) {
+        if (!isInstalled()) {
             console.log("Agents not installed.");
             process.exit(1);
         }
@@ -38,7 +43,7 @@ switch (cmd) {
         break;
 
     case "--uninstall":
-        if (!exists(TARGET_DIR)) {
+        if (!isInstalled()) {
             console.log("Agents not installed.");
             process.exit(0);
         }

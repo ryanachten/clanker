@@ -8,7 +8,7 @@ Personal shared agent and skill configurations.
 ```bash
 npx github:ryanachten/agentz --install
 ```
-Adds shared agents to `.agents/shared/` as a git submodule.
+Adds shared skills to `.agents/skills/shared/`.
 
 ### Update
 ```bash
@@ -24,10 +24,10 @@ Removes shared agents from your project.
 
 ## Usage
 
-After installing, shared skills are available in `.agents/shared/`. Reference them in your workspace configuration or `.instructions.md`:
+After installing, shared skills are available in `.agents/skills/shared/`. Reference them in your workspace configuration or `.instructions.md`:
 
 ```
-.agents/shared/skills/[skill-name]/SKILL.md
+.agents/skills/shared/[skill-name]/SKILL.md
 ```
 
 ## Requirements
@@ -40,7 +40,7 @@ After installing, shared skills are available in `.agents/shared/`. Reference th
 
 ### Setup
 
-Add `.agents/` to your project's `.gitignore` to keep shared agents local:
+Add `.agents/skills/shared` to your project's `.gitignore` to keep shared skills local:
 
 ```
 .agents/
