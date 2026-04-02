@@ -71,6 +71,7 @@ Fixes: #456
 - **No Scope**: Omit the `(scope)` part entirely to keep messages clean.
 - **Breaking Changes**: Use `!` after the type (e.g., `feat!:`) for breaking changes, optionally with a `BREAKING CHANGE:` footer.
 - **Body**: Explain the "why" and provide context if needed. Separate from title with a blank line.
+<<<<<<< HEAD
 - **Footers**: Use trailers like `Fixes:`, `Closes:`, `Co-authored-by:` when relevant.
 
 ## Workflow
