@@ -30,6 +30,9 @@ After installing, shared skills are available in `.agents/skills/shared/`. Refer
 .agents/skills/shared/[skill-name]/SKILL.md
 ```
 
+### Gemini CLI
+- You'll need to link these via `/skills link ./.agents/skills`
+
 ## Requirements
 
 - Git (for submodule operations)
