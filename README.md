@@ -1,4 +1,4 @@
-# agentz
+# clanker
 
 Personal shared agent and skill configurations.
 
@@ -6,19 +6,19 @@ Personal shared agent and skill configurations.
 
 ### Install
 ```bash
-npx github:ryanachten/agentz --install
+npx github:ryanachten/clanker --install
 ```
 Adds shared skills to `.agents/skills/shared/`.
 
 ### Update
 ```bash
-npx github:ryanachten/agentz --update
+npx github:ryanachten/clanker --update
 ```
 Updates shared agents to the latest version.
 
 ### Uninstall
 ```bash
-npx github:ryanachten/agentz --uninstall
+npx github:ryanachten/clanker --uninstall
 ```
 Removes shared agents from your project.
 

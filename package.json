@@ -1,7 +1,7 @@
 {
-    "name": "agentz",
+    "name": "clanker",
     "version": "0.0.0",
     "bin": {
-        "agentz": "./cli.js"
+        "clanker": "./cli.js"
     }
 }

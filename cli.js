@@ -6,7 +6,7 @@ const path = require("path");
 
 const cmd = process.argv[2];
 
-const REPO_URL = "https://github.com/ryanachten/agentz.git";
+const REPO_URL = "https://github.com/ryanachten/clanker.git";
 const TARGET_DIR = ".agents";
 
 function run(command) {
@@ -56,8 +56,8 @@ switch (cmd) {
     default:
         console.log(`
 Usage:
-  agentz --install
-  agentz --update
-  agentz --uninstall
+  clanker --install
+  clanker --update
+  clanker --uninstall
 `);
 }
