@@ -18,7 +18,7 @@ function exists(filepath) {
 }
 
 function isInstalled() {
-    return exists(path.join(TARGET_DIR, "skills", "shared"));
+    return exists(path.join(TARGET_DIR, "skills", "clanker"));
 }
 
 switch (cmd) {
@@ -30,7 +30,7 @@ switch (cmd) {
 
         console.log("Installing agents...");
         run(`git clone --filter=blob:none --sparse ${REPO_URL} ${TARGET_DIR}`);
-        run(`git -C ${TARGET_DIR} sparse-checkout set --no-cone skills/shared`);
+        run(`git -C ${TARGET_DIR} sparse-checkout set --no-cone skills/clanker`);
         break;
 
     case "--update":
